@@ -2,6 +2,8 @@
 Forking our WAFS project and analyzing if the site is accessible for everyone.
 To test this, we can simulate different scenario's like, JavaScript not loading, being (color)blind, having a slow internet connection and other scenarios that we have to anticipate for 
 
+https://jajan20.github.io/browser-technologies/
+
 #### Feature check:
 - **JavaScript:** Doesn't work without JavaScript.
 - **Images:** Missing alt text when images won't load.
