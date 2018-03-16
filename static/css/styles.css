@@ -8,6 +8,7 @@
 
 body {
   	font-family: 'PT Sans', sans-serif;
+    font-display: swap;
     background-color:#30332E;
 }
 
@@ -58,6 +59,7 @@ body {
 
 }
 
+
 #popularShows .filterContainer {
   position:fixed;
   width:100%;
@@ -68,6 +70,10 @@ body {
   background-color:deepskyblue;
   z-index:2;
   height:3em;
+}
+
+.filterContainer > label {
+  display:none;
 }
 
 #popularShows .show-container {
