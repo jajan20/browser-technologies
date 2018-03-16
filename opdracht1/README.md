@@ -23,7 +23,7 @@ With the use of google fonts, my custom font loads really fast. But I could use 
 - [ ] Site doesn't work without JavaScript, this can't be fixed as of right now. From the moment the page is loaded, a AJAX call is made and uses JavaScript to render every content element on the page. 
 - [ ] Find out how to add alt text with transparency JS so that when images fail to load there is a description.
 - [ ] With first view I could try to use criticalCSS but all of my content is loaded from AJAX calls. For returning users I could use local Storage to save data that they already downloaded before.
-- [ ] With font display: swap I could make the text load faster so that it feels like the site is faster (progressive loading).
+- [x] With font display: swap I could make the text load faster so that it feels like the site is faster (progressive loading).
 - [ ] Cookies gebruiken om gebruikers te onthouden.
 - [x] Fix Firefox issue: Working in modules is a rather new functionality and isn't supported in all browsers. (Just in Chrome & Safari)
 
