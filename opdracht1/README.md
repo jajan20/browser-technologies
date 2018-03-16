@@ -4,16 +4,40 @@ To test this, we can simulate different scenario's like, JavaScript not loading,
 
 https://jajan20.github.io/browser-technologies/
 
-#### Feature check:
-- **JavaScript:** Doesn't work without JavaScript.
-- **Images:** Missing alt text when images won't load.
-- **Color:** Tested with tools to mimic being color blind, site can still be used.
-- **Local Storage:** With slow internet speed it takes quite some time to load the page.
+## Feature check:
+### Color
+![](https://github.com/jajan20/browser-technologies/blob/master/opdracht1/color.jpg)
+
+Tested with tools to mimic being color blind, site can still be used. But adding some more contrast makes it look a lot better.
+
+- [Protanopia](https://www.toptal.com/designers/colorfilter?orig_uri=www.color-blindness.com&process_type=protan)
+- [Dotanopia](https://www.toptal.com/designers/colorfilter?orig_uri=www.color-blindness.com&process_type=protan)
+- [Tritanopia](https://www.toptal.com/designers/colorfilter?orig_uri=www.color-blindness.com&process_type=protan)
+
+### JavaScript
+Website won't load without JavaScript.
+![](https://github.com/jajan20/browser-technologies/blob/master/opdracht1/javascript_disabled.jpg)
+Since WAFS was focused on single page web app everything breaks when JavaScript doesn't load.
+
+### Images
+Website works without images, but there's no alt text included. I could use the following html code: 
+```html
+alt=""
+```
+This because all my images have headers with titles. Detail pages also work without the use of images.
+![](https://github.com/jajan20/browser-technologies/blob/master/opdracht1/noImages.jpg)
+
+### Mouse/Trackpad
+When we navigate through my website without using a mouse/trackpad we'll notice a few things. Even though my serie buttons have hover states, they miss the focus states. By giving focus state and hover state the same styling we can fix this problem.
+![](https://github.com/jajan20/browser-technologies/blob/master/opdracht1/focusStates.jpg)
+
+### Other features for future projects
+
+- **Local Storage:** saving already downloaded images?
 - **Bandwidth:** Missing progressive loading.
 - **Custom Fonts:**
 With the use of google fonts, my custom font loads really fast. But I could use font display swap to load text content first and then when the font is loaded swap the regular to the custom font.
 - **Cookies:** No functional use right now. 
-- **Mouse/Trackpad:** Tabbing works, some focus states are missing.
 - All the content is loaded at once.
 - Missing the opportunity to save data to local Storage.
 - Site doesn't work in every browser (Firefox).
