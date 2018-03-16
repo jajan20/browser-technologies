@@ -35,7 +35,7 @@ With the use of google fonts, my custom font loads really fast. But I could use 
 <script type="module"
 ```
 
-#### Voiceover tests
+## Voiceover tests
 Even though my app is rather small and I thought that everything would work fine. I realised while using the voice over option that I still need to work on a couple of things.
 
 Alt text, correct usage of labels, explaining navigation.
@@ -45,7 +45,7 @@ Alt text, correct usage of labels, explaining navigation.
 ![](https://github.com/jajan20/browser-technologies/blob/master/opdracht1/image_02.jpg)
 
 
-#### Device tests
+## Device tests
 The core of WAFS was using JavaScript to create a single page webapp. And after testing on different devices I found out that this doesn't work, at all.
 Not just older devices, but my own iPhone X won't display the page correctly.
 
