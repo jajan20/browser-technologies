@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>TV Shows</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/styles.css">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+</head>
+
+<body>
+    <main>
+        <div id="loaderContainer" class="activeLoader">
+            <div class="loader">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        
+        <section id="popularShows" class="section">
+            <div class="filterContainer">
+            <input id="filter" type="search" placeholder="Search show..."/>
+            </div>
+            <article id="show">
+                <div class="show-container">
+                    
+                    <a href="" class="link">
+                        <h2 class="title"></h2>
+                        <img class="image" src="">
+                    </a>
+                </div>
+            </article>
+        </section>
+
+         <section id="showDetail" class="section">
+            <nav class="buttonContainer">
+                <button class="back-btn"><i class="fas fa-angle-left fa-2x"></i></button>
+            </nav>
+            <div class="show-container">
+                <img class="backdrop" src=""/>
+                <h2 class="title"></h2>
+                <img class="poster" src=""/>
+                <p class="summary"></p>
+                <footer class="meta">
+                    <p>
+                    Nr. of episodes: <span class="nrOfEpisodes"></span>
+                </p>
+                <p>
+                    Rating: 
+                    <span class="rating"></span> / 
+                    <span class="voteCount"></span>
+                </p>
+                <p>
+                    First Air date : <span class="firstAirDate"></span>
+                </p>
+            </footer>
+            </div>
+        </section>
+        
+        <article id="errorWindow">
+            <h1>Error Window</h1>
+                <p>Oops.. Could not connect to API. Check your internet connection and try again.</p>
+        </article>
+
+    </main>
+</body>
+
+<script src="lib/transparency.min.js"></script>
+<script src="lib/routie.js"></script>
+<script src="static/js/script.js"></script>
+
+</html>

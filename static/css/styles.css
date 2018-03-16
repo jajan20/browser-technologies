@@ -1,0 +1,258 @@
+/* ========================
+===== BASIC RESTYLING =====
+======================== */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  	font-family: 'PT Sans', sans-serif;
+    background-color:#30332E;
+}
+
+#errorWindow {
+  top:50%;
+  left:50%;
+  transform:translate(-50%);
+  z-index:3000;
+  position:fixed;
+  color:white;
+  background-color:crimson;
+  visibility: hidden;
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#errorWindow h1 {
+  text-transform: uppercase;
+  padding:1em;
+}
+
+#errorWindow p {
+  padding:1em;
+  background-color:white;
+  color:crimson;
+}
+
+#filter {
+  outline:none;
+}
+/* ========================
+==== TV SHOW OVERVIEW =====
+======================== */
+#popularShows article {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content: space-around;
+  margin:0em .5em .5em .5em;
+  padding-top:4em;
+}
+
+#popularShows input {
+  width:50%;
+  border:none;
+  padding:1em;
+  margin:1em;
+
+}
+
+#popularShows .filterContainer {
+  position:fixed;
+  width:100%;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color:deepskyblue;
+  z-index:2;
+  height:3em;
+}
+
+#popularShows .show-container {
+  display:flex;
+  flex-direction: column;
+  box-shadow: 0px 2px 3px 2px rgba(0,0,0,0.2);
+  margin:1em;
+}
+
+#popularShows .show-container .title {
+    text-align: center;
+    font-size:.8em;
+    color:black;
+    padding:.5em 0em .5em 0em;
+    background-color:gray;
+    transition:all 200ms;
+}
+
+#popularShows a:hover .title {
+    background-color:deepskyblue;
+    color:white;
+}
+
+
+#popularShows .image {
+  max-height: 300px;
+  width: auto;
+  overflow: hidden;
+  display:block;
+  transition:all 200ms;
+  filter: opacity(.4) grayscale(90%);
+}
+
+#popularShows .image:hover {
+    filter: opacity(1);
+}
+
+#popularShows a {
+  text-decoration: none;
+  transition:all 200ms;
+}
+
+
+/* ========================
+==== TV SHOW OVERVIEW =====
+======================== */
+#showDetail .show-container {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color:darkslategrey;
+  width:100%;
+  min-width:50vh;
+  max-width:100vh;
+  background-color:floralwhite;
+  margin-left:auto;
+  margin-right:auto;
+  transform: translateY(5em);
+  position: relative;
+}
+
+#showDetail .show-container .backdrop {
+  width:100%;
+}
+
+#showDetail .show-container .poster {
+  width:30%;
+  position:absolute;
+  top:8em;
+  left:1em;
+}
+
+
+
+#showDetail .show-container p {
+margin:0em 1em 0em 1em;
+}
+
+.meta {
+  display:flex;
+  margin:1em;
+  text-transform: uppercase;
+  color:slategray;
+}
+
+.meta span {
+font-weight:800;
+color:black;
+}
+
+.back-btn {
+  background:none;
+  border:none;
+  padding:1em;
+  color:white;
+  transition: all 200ms;
+  outline:none;
+}
+
+.back-btn:hover,
+.back-btn:focus {
+  color:red;
+  outline:none;
+  background-color:white;
+}
+
+.buttonContainer {
+  display:flex;
+  position:fixed;
+  width:100%;
+  border:none;
+  background-color:deepskyblue;
+  z-index:2;
+  height:3em;
+}
+
+#showDetail .title {
+  padding:.5em 0em 1em 0em;
+  }
+
+
+
+/* ========================
+===== TOGGLE CLASSES =====
+======================== */
+section {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+.activeLoader {
+  visibility: visible !important;
+}
+
+#loaderContainer {
+  position: fixed;
+  z-index:3;
+  background-color:deepskyblue;
+  color:red;
+  width:100%;
+  height:100vh;
+  visibility: hidden;
+}
+
+.loader {
+  margin: 2em auto 0;
+  width: 70px;
+  text-align: center;
+  position: fixed;
+  height:100vh;
+  top:50%;
+  left:50%;
+  transform:translate(-50%);
+}
+
+.loader > div {
+  width: 18px;
+  height: 18px;
+  background-color: white;
+  border-radius: 100%;
+  display: inline-block;
+  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.loader > div:nth-child(1) {
+  animation-delay: -0.32s;
+}
+
+.loader > div:nth-child(2) {
+  animation-delay: -0.16s;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+  0%, 80%, 100% { transform: scale(0) }
+  40% { transform: scale(1.0) }
+}
+
+@keyframes sk-bouncedelay {
+  0%, 80%, 100% { transform: scale(0); } 
+  40% { transform: scale(1.0); }
+}
+
+
+
