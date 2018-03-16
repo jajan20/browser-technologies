@@ -1,35 +1,36 @@
-# Browser Technologies
-//Robuuste, toegankelijke websites leren bouwen … 
+## Assignment 1.2
+Forking our WAFS project and analyzing if the site is accessible for everyone.
+To test this, we can simulate different scenario's like, JavaScript not loading, being (color)blind, having a slow internet connection and other scenarios that we have to anticipate for 
 
-## Opdracht 1 - Progressive Enhancement
+#### Feature check:
+- **JavaScript:** Doesn't work without JavaScript.
+- **Images:** Missing alt text when images won't load.
+- **Color:** Tested with tools to mimic being color blind, site can still be used.
+- **Local Storage:** With slow internet speed it takes quite some time to load the page.
+- **Bandwidth:** Missing progressive loading.
+- **Custom Fonts:**
+With the use of google fonts, my custom font loads really fast. But I could use font display swap to load text content first and then when the font is loaded swap the regular to the custom font.
+- **Cookies:** No functional use right now. 
+- **Mouse/Trackpad:** Tabbing works, some focus states are missing.
+- All the content is loaded at once.
+- Missing the opportunity to save data to local Storage.
+- Site doesn't work in every browser (Firefox).
+- Voiceover has trouble identifying correct elements.
+- Website is responsive, but could use some optimizations.
+- Doesn’t work in Firefox.
 
-### Opdracht 1.1 - Breek het Web
-Het Web laten 'breken' door features van het platform bewust uit te zetten. Images, custom fonts, JavaScript, kleur, breedband internet, etc. Allemaal met als doel je te laten beseffen hoeveel je nog niet weet van het Web, erachter komen dat je misschien aannames hebt die niet kloppen, en om je je in te laten leven in de eindgebruiker.
-
-Onderzoek minimaal twee features. Dat betekent uitvogelen wat het voor impact heeft op de sites die je kent en normaal gebruikt. Kies sites in je directe omgeving: van je werkgever, lokale vereniging, de cafetaria om de hoek, en/of eerdere projecten die je zelf gedaan hebt.
-
-Kies 2 features van de 8
-- Zoek uit welke problemen ze kunnen veroorzaken (verzamel cijfers, meningen, ervaringen)
-- Zoek uit hoe je dit kunt testen (hoe kun je een feature ‘uitzetten’)
-- Vind een aantal sites waar dit ook problemen oplevert (uit je directe omgeving)
-- Beschrijf hoe je dit kan fiksen
-- Maak hierover een presentatie en neem die woensdag mee, dan gaan we de resultaten bespreken
-Lezen: [Everyone has JavaScript, right?](https://kryogenix.org/code/browser/everyonehasjs.html) en [I Turned Off JavaScript and it was Glorious](https://www.wired.com/2015/11/i-turned-off-javascript-for-a-whole-week-and-it-was-glorious/)
+#### Solutions
+- [ ] Site doesn't work without JavaScript, this can't be fixed as of right now. From the moment the page is loaded, a AJAX call is made and uses JavaScript to render every content element on the page. 
+- [ ] Find out how to add alt text with transparency JS so that when images fail to load there is a description.
+- [ ] With first view I could try to use criticalCSS but all of my content is loaded from AJAX calls. For returning users I could use local Storage to save data that they already downloaded before.
+- [ ] With font display: swap I could make the text load faster so that it feels like the site is faster (progressive loading).
+- [ ] Cookies gebruiken om gebruikers te onthouden.
+- [x] Fix Firefox issue: Working in modules is a rather new functionality and isn't supported in all browsers. (Just in Chrome & Safari)
 
 
-### Opdracht 1.2 - Fork je OBA
-Hoe zit het eigenlijk met Progressive Enhancement van je OBA opdracht? Waarschijnlijk kan daar wel het één en ander aan verbeterd worden, dat ding is immers in een week in elkaar gehackt! 
+####
+**Fix** for firefox, don't use type is module. This is a very new function used in ES6 and isn't supported by every browser. 
 
-Voor deze opdracht ga je toepassen wat je van opdracht 1.1 hebt geleerd.
-- Pas Progressive enhancement toe op je OBA Web App. 
-- Check je OBA Web App op de 8 features uit opdracht 1.1 en verbeter de code waar mogelijk.
-- Test  je OBA Web App in het device lab.
-- Laat je OBA Web App voorlezen door een screenreader. 
-- Gebruik onderstaande artikelen om je code te optimaliseren.
-[The accessibility mindset](https://24ways.org/2015/the-accessibility-mindset/) en [Accessibility Originates With UX: A BBC iPlayer Case Study](https://www.smashingmagazine.com/2015/02/bbc-iplayer-accessibility-case-study/)
-
-Criteria
-- Zet je code op Github
-- Schrijf een Readme met een beschrijving van de problemen die je hebt gevonden, hoe je die hebt opgelost, of hoe je dit zou oplossen (met todo’s) als je genoeg tijd en budget zou hebben 
-
- 
+```html
+<script type="module"
+```
