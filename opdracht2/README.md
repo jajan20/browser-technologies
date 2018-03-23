@@ -1,4 +1,5 @@
 ## Accordion
+[Live version: Accordion](https://jajan20.github.io/browser-technologies/opdracht2/accordion/)
 
 #### The Core
 There's a lot of information about accordions on the web. Every source explains it in a different way. Either by using CSS + JavaScript, or just CSS with some hacks. The main function of an accordion is giving the user en overview of different subjects (titles) which refer to the content hidden inside. This way it's a lot easier looking for something. F.A.Q. list, or forums with a lot of questions could work really well with this. 
@@ -68,6 +69,8 @@ This is a simple example of feature detection, but for details tag it'll work. L
 - [Feature Detection](http://thenewcode.com/680/Feature-Detection-and-Styling-For-The-HTML5-details-Element)
 
 ## Image Picker
+
+[Live version: Image Picker ](https://jajan20.github.io/browser-technologies/opdracht2/imagePicker/)
 
 #### The Core
 An image picker is used on websites so that users can upload images. When this line of code ```
