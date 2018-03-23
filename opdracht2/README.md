@@ -54,7 +54,7 @@ This is a simple example of feature detection, but for details tag it'll work. L
 - Chrome
 - Firefox
 - Safari
-- Internet Explorer 8
+- Internet Explorer 11
 - Edge
 - iOS Safari
 
@@ -147,7 +147,7 @@ Right now the user can add as many files as they want. When used in some context
 - Safari
 - Chrome
 - Firefox
-- Internet Explorer 8
+- Internet Explorer 11
 - Edge
 - iOS Safari
 
