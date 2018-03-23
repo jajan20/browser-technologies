@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
+    <title>Upload Image</title>
+    
+    <style>
+        * {
+            margin:0;
+            padding:0;
+        }
+
+        body {
+            font-family: 'PT Sans', sans-serif;
+        }
+
+        body > section:nth-child(1) {
+            margin:1em;
+            display:flex;
+            flex-direction:column;
+        }
+
+        input {
+            margin:1em 0;
+        }
+
+        #gallery {
+            display:flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        #gallery .thumbnail {
+            width:20em;
+            margin:.5em;
+        }
+
+        #gallery .thumbnail img {
+            width:100%;
+
+        }
+
+    </style>
+</head>
+<body>
+
+<section>
+    <h2></h2>
+    <label>Upload Images</label>
+    <input type="file" id="fileinput" multiple="multiple" accept="image/*"/>
+</section>
+
+<section id="gallery"></section>
+
+</body>
+<script>
+
+
+
+var uploadfiles = document.querySelector('#fileinput')
+
+uploadfiles.addEventListener('change', function () {
+    var files = this.files
+    for (var i = 0; i < files.length; i++){
+        previewImage(this.files[i])
+    }
+}, false )
+
+function previewImage(file) {
+    var galleryId = "gallery"
+ 
+    var gallery = document.getElementById(galleryId)
+    var imageType = /image.*/
+ 
+    if (!file.type.match(imageType)) {
+        throw "File Type must be an image"
+    }
+ 
+    var thumb = document.createElement("article")
+    thumb.classList.add('thumbnail')
+ 
+    var img = document.createElement("img")
+    img.file = file
+    thumb.appendChild(img)
+    gallery.appendChild(thumb)
+ 
+    // Using FileReader to display the image content
+    var reader = new FileReader()
+    reader.onload = (function(aImg) { return function(e) { aImg.src = e.target.result } })(img)
+    reader.readAsDataURL(file)
+}
+
+</script>
+</html>
