@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
+	<title>Contacts</title>
+
+	<style>
+
+	* {
+		margin: 0;
+		padding: 0;
+	}
+
+	header input {
+		outline:0;
+		border:0;
+		margin:1em;
+	}
+
+	header label {
+		display:none;
+	}
+
+	body {
+		font-family: 'PT Sans', sans-serif;
+	}
+
+	article {
+		display: flex;
+		flex-direction:column;
+	}
+
+	h1 {
+		padding:0 .5em;
+
+		background-color: #006992;
+		color: white;
+	}
+
+	a {
+		text-decoration: none;
+		color:black;
+	}
+
+	a h2 {
+		font-size:1em;
+		font-weight:400;
+		margin:.5em .5em;
+	}
+
+
+
+	a:hover, a:focus, a:hover > h2, a:focus > h2 {
+		outline:none;
+		background-color: #E3E3E3;
+		font-weight:700;
+	}
+
+	section {
+		display:flex;
+		flex-direction: column;
+	}
+
+	span {
+		
+	}
+
+	img {
+		width:50%;
+	}
+
+	</style>
+</head>
+
+<body>
+	<header>
+
+	</header>
+
+	<section>
+	<h1><%= contact.name +" "+ contact.surname %></h1>
+	<img src="<%= contact.photo%>">
+	<span><%= "age: " + contact.age %></span> <span><%= "region: " + contact.region %></span>
+	<span><%= "birthday: " + contact.birthday.mdy %></span> <span><%= "email adress: " + contact.email %></span>
+
+	</section>
+</body>
+
+<script></script>
+</html>

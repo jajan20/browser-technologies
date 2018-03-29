@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
+	<title>Contacts</title>
+
+</head>
+
+<body>
+	<header>
+			<label>Search contacts</label>
+			<input id="search-bar" type="search" placeholder="Search contacts">
+	</header>
+
+	<ol id="list">
+	<% for (var i = 0; i < contacts.length; i++) { %>
+		
+		<% if (contacts[i].letter) { %>
+			<h1 id='<%=contacts[i].letter%>'><%= contacts[i].letter %></h1>
+		<% } %>
+
+		<% for (var j = 0; j < contacts[i].contacts.length; j++) { %>
+			<li>
+			<a href="<%= contacts[i].contacts[j].name + " " + contacts[i].contacts[j].surname %>"><%= contacts[i].contacts[j].name + " " + contacts[i].contacts[j].surname %></a>
+			</li>
+		<% } %>
+
+	<% } %>
+	</ol>
+</body>
+
+<script src="js/script.js"></script>
+</html>
