@@ -5,6 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="icon" href="data:;base64,iVBORw0KGgo=">
 	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
 	<title>Contacts</title>
 
@@ -18,17 +19,19 @@
 
 	<ol id="list">
 	<% for (var i = 0; i < contacts.length; i++) { %>
-		
-		<% if (contacts[i].letter) { %>
-			<h1 id='<%=contacts[i].letter%>'><%= contacts[i].letter %></h1>
-		<% } %>
-
-		<% for (var j = 0; j < contacts[i].contacts.length; j++) { %>
-			<li>
-			<a href="<%= contacts[i].contacts[j].name + " " + contacts[i].contacts[j].surname %>"><%= contacts[i].contacts[j].name + " " + contacts[i].contacts[j].surname %></a>
+		<div class="letter-container">
+			<% if (contacts[i].letter) { %>
+				<h1 class="follow" id='<%=contacts[i].letter%>'><%= contacts[i].letter %></h1>
+			<% } %>
+		</div>
+		<div class="contact-container">
+			<% for (var j = 0; j < contacts[i].contacts.length; j++) { %>
+				<li>
+				<img src="<%= contacts[i].contacts[j].photo%>">		
+				<a href="<%= contacts[i].contacts[j].name + " " + contacts[i].contacts[j].surname %>"><%= contacts[i].contacts[j].name + " " + contacts[i].contacts[j].surname %></a>
 			</li>
 		<% } %>
-
+	</div>
 	<% } %>
 	</ol>
 </body>
