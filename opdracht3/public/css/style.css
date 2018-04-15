@@ -21,34 +21,56 @@ header label {
 
 body {
 	font-family: 'PT Sans', sans-serif;
+	background-color:#F3F5F6;
+}
+
+li {
+	display:flex;
+	margin:0 .5em .5em 3em;
+	align-items:center;
+}
+
+.letter-container {
+	display:flex;
+	position: relative;
+	transition: all 1s;
+}
+
+.delete {
+	display:none;
+	transition: all 1s;
 }
 
 h1 {
-	margin-left:1em;
-	font-size:1em;
+	margin-left:.5em;
+	font-size:1.5em;
+	position: absolute;
 }
 
-a {
-	display:block;
-	width:100%;
-	margin:.2em 0;
-	padding:1em;
-	text-decoration: none;
-	border-radius: .5em;
-	
-	color:black;
-	background-color:#E6E6E6;
-	
+.fixed {
+	position:fixed;
+	top:0;
 }
 
-a h2 {
-	background-color:green;
+li:last-child {
+	margin-bottom:2em;
+	/*background-color:red;*/
+}
+
+.hidden {
+	display:none;
+}
+
+li a {
+	margin-left:.5em;
+}
+
+li img {
+	width:4em;
+	height:4em;
+	border-radius:2px;
+	box-shadow:0px 1px 1px #888;
 }
 
 
 
-a:hover, a:focus, a:hover > h2, a:focus > h2 {
-	outline:none;
-	background-color: #8CE1FF;
-	font-weight:700;
-}

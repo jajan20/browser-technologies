@@ -1,0 +1,43 @@
+body {
+	font-family: 'PT Sans', sans-serif;
+	background-color:#F3F5F6;
+}
+
+header {
+	display:flex;
+	justify-content: center;
+}
+
+header img {
+	margin-top:1em;
+	width:25%;
+	height:25%;
+	border-radius:200px;
+	box-shadow:0px 1px 1px #888;
+}
+
+section {
+	display:flex;
+	flex-direction:column;
+	align-items: center;
+}
+
+section span {
+	align-self: left;
+	margin-top:1em;
+}
+
+.contact-info {
+	display:flex;
+	flex-direction: column;
+}
+
+button {
+	background-color:#FF4F67;
+	color:white;
+	outline:none;
+	border:none;
+	padding:.5em 1em;
+	margin:.5em;
+	border-radius:2px;
+}
