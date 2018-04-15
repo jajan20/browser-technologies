@@ -54,11 +54,11 @@ The bare minimum for a contact list would be an alphabetical list of all the con
 So first I made sure it worked in the browser I use the most, while testing I found out that not every browser can render the list as I had intended.
 
 #### Internet Explorer 8
-![](/Users/Jamie/Desktop/images/ie_08.png)
+![](https://raw.githubusercontent.com/jajan20/browser-technologies/master/opdracht3/images/ie_08.png)
 Internet Explorer doesn't support most of the CSS I've used, but there's a natural fallback so the core functionality is still useable.
 
 #### Internet Explorer 9
-![](/Users/jamie/Desktop/images/ie_09.png)
+![](https://raw.githubusercontent.com/jajan20/browser-technologies/master/opdracht3/images/ie_09.png)
 The next version renders most of the css but the placeholder doesn't show. So I wrote a bit of code for **feature detection**:
 
 ```js
@@ -75,23 +75,23 @@ This will check if the placeholder attribute is supported and if it's not I will
 
 
 #### Internet Explorer 11
-![](/Users/jamie/Desktop/images/ie_11.png)
+![](https://raw.githubusercontent.com/jajan20/browser-technologies/master/opdracht3/images/ie_11.png)
 Same feature detection as with version 9.
 
 #### Microsoft Edge
-![](/Users/jamie/Desktop/images/edge.png)
+![](https://raw.githubusercontent.com/jajan20/browser-technologies/master/opdracht3/images/edge.png)
 Everything works.
 
 ## Chrome
-![](/Users/jamie/Desktop/images/chrome_both.png)
+![](https://raw.githubusercontent.com/jajan20/browser-technologies/master/opdracht3/images/chrome_both.png)
 Everything works.
 
 ## Safari
 Everything still works on safari, but the search input renders differently.
 
-![](/Users/jamie/Desktop/images/safari.png)
+![](https://raw.githubusercontent.com/jajan20/browser-technologies/master/opdracht3/images/safari.png)
 ## Firefox
-![](/Users/jamie/Desktop/images/firefox.png)
+![](https://raw.githubusercontent.com/jajan20/browser-technologies/master/opdracht3/images/firefox.png)
 
 ## Conclusion
 This assignment was a good challenge, I learned a lot and realized I have so much more to learn. One of the things that stuck is that at school we make assignments in this perfect bubble, but the real live web is truly messy.
