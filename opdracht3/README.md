@@ -2,6 +2,8 @@
 #### Use case
 In a list of contacts, I want to be able to filter and be able to see the details of every contact.
 
+[Link to live preview](https://week03-dewqwbdsuw.now.sh/)
+
 ## Documentation
 - [Core functionality](#core-functionality)
 - [Features](#features)
